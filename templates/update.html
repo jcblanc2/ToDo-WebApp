@@ -1,0 +1,36 @@
+
+{%extends "base.html" %}
+{% block title %}Home{% endblock %}
+{%block content%}
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles_update.css') }}">
+    <div class="ui inverted segment">
+          <div class="ui inverted secondary menu">
+                <a href="/" class="active item">
+                  Home
+                </a>
+                <a href="/about" class="item">
+                  About
+                </a>
+                <a class="item">
+                  Contact
+                </a>
+          </div>
+    </div>
+    <h1>Update Your Task</h1>
+
+    {% for row in list_todo %}
+        {% if row.id == id_to_update %}
+
+             <div class="ui inverted segment" id="container">
+                <form action="/edit" method="POST">
+                    <input type="text" name="task" value="{{row.task}}" autofocus required>
+                    <button class="ui inverted secondary button" type="submit">Update</button>
+                </form>
+        {% endif %}
+    {% endfor %}
+
+    <br><a class="ui button" href="/">Cancel</a>
+            </div>
+
+{% endblock %}

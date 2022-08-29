@@ -1,0 +1,71 @@
+
+{%extends "base.html" %}
+{% block title %}About{% endblock %}
+{%block content%}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles_about.css') }}">
+
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary menu">
+            <a href="/" class="active item">
+              Home
+            </a>
+            <a href="/about" class="item">
+              About
+            </a>
+            <a class="item">
+              Contact
+            </a>
+      </div>
+    </div>
+
+    <br>
+    <h1>Our Team</h1>
+    <br>
+    <br>
+
+    <div class="ui inverted segment" id="container">
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><a href="{{url_for('static', filename='images/Clayton2.PNG')}}"><img class="team_image" src="{{url_for('static', filename='images/Clayton1.png')}}" /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">John Clayton Blanc</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">My name is John B. Clayton and I really enjoy building AI, I also love web development.
+I'm studying Computer Science at university Espoir.</p></div>
+                </div>
+            </li>
+
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{url_for('static', filename='images/Steph2.PNG')}}"><img class="steph_image" src="{{url_for('static', filename='images/Steph1.png')}}" /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Stephanie Diana Paul</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">I am 21 years old, I am studying computer science at university Espoir. I love programming.</p></div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-image"><a href="{{url_for('static', filename='images/Hans2.PNG')}}"><img class="team_image" src="{{url_for('static', filename='images/Hans1.png')}}" /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Hans Pierre Herold Saincilaire</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">I am 22 years old, I am studying computer science at university Espoir.</p></div>
+                </div>
+            </li>
+
+            <li class="timeline-inverted">
+                <div class="timeline-image"><a href="{{url_for('static', filename='images/Jenifer2.PNG')}}"><img class="jenn_image" src="{{url_for('static', filename='images/Jenifer1.png')}}" /></a></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Jenifer Bourdeau</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">I am 23 years old, I am studying computer science at university Espoir. I want to become a cybersecurity analyst.</p></div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+{% endblock %}
